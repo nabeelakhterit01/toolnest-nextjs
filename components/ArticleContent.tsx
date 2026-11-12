@@ -15,7 +15,7 @@ function inline(text:string):ReactNode[]{
 export default function ArticleContent({content}:{content:string}){
  const blocks=content.trim().split(/\n\s*\n/).filter(Boolean);
  return <article className="article-content">{blocks.map((block,i)=>{
-  const image=block.match(/^!\\[([^\\]]*)\\]\\((https:\\/\\/[^\\s)]+)\\)$/);if(image)return <figure key={i}><img src={image[2]} alt={image[1]||'Article image'} loading="lazy" style={{maxWidth:'100%',height:'auto',borderRadius:12}}/></figure>;
+  const image=block.match(/^!\[([^\]]*)\]\((https:\/\/[^\s)]+)\)$/);if(image)return <figure key={i}><img src={image[2]} alt={image[1]||'Article image'} loading="lazy" style={{maxWidth:'100%',height:'auto',borderRadius:12}}/></figure>;
   if(block.startsWith('### '))return <h3 key={i}>{inline(block.slice(4))}</h3>;
   if(block.startsWith('## '))return <h2 key={i}>{inline(block.slice(3))}</h2>;
   if(block.startsWith('> '))return <blockquote key={i}>{inline(block.slice(2))}</blockquote>;
