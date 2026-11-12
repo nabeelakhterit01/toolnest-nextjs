@@ -32,3 +32,20 @@
 .nav-search:hover{background:#e6e4ff}.nav-toggle,.nav-mobile-contact{display:none}
 #tool-search{scroll-margin-top:110px}
 @media(max-width:760px){.nav{justify-content:space-between}.nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;margin:0;background:white;box-shadow:0 18px 30px #17243d17;padding:18px 24px;flex-direction:column;align-items:stretch;gap:8px}.nav .nav-links.nav-open{display:flex}.nav .nav-links>a{padding:8px 0}.nav-dropdown-trigger{width:100%;text-align:left}.nav-dropdown-menu{display:block;position:static;box-shadow:none;border:0;padding:0 0 0 12px}.nav-mobile-contact{display:block}.nav-search{margin-left:auto}.nav-search span{display:none}.nav-toggle{display:inline-flex;align-items:center;justify-content:center;background:#f5f5ff;border:1px solid #e4e3ff;border-radius:9px;width:40px;height:40px;color:#5555e7;font-size:20px}.header{position:sticky}}
+
+/* File uploader v2 */
+.upload{transition:border-color .2s,background .2s,box-shadow .2s;padding:34px 24px}
+.upload-dragging{border-color:#6560ef;background:#f0efff;box-shadow:inset 0 0 0 2px #6560ef24}
+.upload-icon{display:flex;align-items:center;justify-content:center;width:62px;height:62px;margin:0 auto 15px;border-radius:18px;background:#edebff;color:#5c60ef;font-size:36px}
+.upload>strong{display:block;font-size:18px;color:#17243d}
+.upload>p{font-size:13px;margin:8px 0 19px}
+.upload-browse{border:0;border-radius:10px;padding:11px 23px;color:#fff;background:linear-gradient(120deg,#575bea,#895bef);font-weight:750}
+.upload-browse:hover{filter:brightness(.96)}
+.upload .upload-file-input{display:none}
+.upload-preview{display:flex;align-items:center;text-align:left;gap:14px;padding:12px;margin-top:23px;border:1px solid #e2e4f5;border-radius:12px;background:white;min-width:0}
+.upload-preview img{width:64px;height:64px;object-fit:contain;background:#f8f9ff;border-radius:8px;flex-shrink:0}
+.upload-file-details{display:flex;flex-direction:column;min-width:0;flex:1}
+.upload-file-details strong{font-size:13px;overflow-wrap:anywhere}
+.upload-file-details span{font-size:12px;color:#77849a}
+.upload-remove{flex-shrink:0;border:0;background:#fff0f2;color:#b5364f;border-radius:8px;width:34px;height:34px}
+@media(max-width:650px){.upload{padding:24px 14px}.upload-preview img{width:50px;height:50px}}
