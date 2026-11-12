@@ -8,7 +8,7 @@ function inlineHtml(s:string){
 }
 function markdownToHtml(md:string){
  return md.split(/\n\s*\n/).filter(Boolean).map(block=>{
-  const image=block.match(/^!\\[([^\\]]*)\\]\\((https:\\/\\/[^\\s)]+)\\)$/);if(image)return '<p><img src="'+escapeHtml(image[2])+'" alt="'+escapeHtml(image[1])+'" style="max-width:100%;height:auto" /></p>';
+  const image=block.match(/^!\[([^\]]*)\]\((https:\/\/[^\s)]+)\)$/);if(image)return '<p><img src="'+escapeHtml(image[2])+'" alt="'+escapeHtml(image[1])+'" style="max-width:100%;height:auto" /></p>';
   if(block.startsWith('### '))return '<h3>'+inlineHtml(block.slice(4))+'</h3>';
   if(block.startsWith('## '))return '<h2>'+inlineHtml(block.slice(3))+'</h2>';
   if(block.startsWith('> '))return '<blockquote>'+inlineHtml(block.slice(2))+'</blockquote>';
