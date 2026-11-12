@@ -3,7 +3,7 @@ import {tools} from '@/lib/tools';
 import {publishedPosts} from '@/lib/posts';
 export const dynamic='force-dynamic';
 export default async function sitemap():Promise<MetadataRoute.Sitemap>{
- const base=(process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000').replace(/\/$/,'');
+ const base='https://toolnestweb.com';
  let articles:string[]=[];
  try{articles=(await publishedPosts()).map(p=>'/blog/'+p.slug)}catch(e){console.error('Sitemap blog lookup failed',e)}
  const paths=['','/tools','/blog','/about','/contact','/privacy','/terms',...tools.map(t=>'/tools/'+t.slug),...articles];
