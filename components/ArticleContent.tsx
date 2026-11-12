@@ -1,11 +1,11 @@
 import type {ReactNode} from 'react';
 function inline(text:string):ReactNode[]{
- const tokens=text.split(/(\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|\*\*[^*]+\*\*|\*[^*\n]+\*)/g);
+ const tokens=text.split(/(\[[^\]]+\]\(https?:\/\/[^\s)]+\)|\*\*[^*]+\*\*|\*[^*\n]+\*)/g);
  const out:ReactNode[]=[];
  for(let i=0;i<tokens.length;i++){
   const part=tokens[i];if(!part)continue;
   const match=part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/);
-  if(match){out.push(<a key={i} href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>);i+=2;continue}
+  if(match){out.push(<a key={i} href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>);continue}
   if(part.startsWith('**')&&part.endsWith('**'))out.push(<strong key={i}>{part.slice(2,-2)}</strong>);
   else if(part.startsWith('*')&&part.endsWith('*'))out.push(<em key={i}>{part.slice(1,-1)}</em>);
   else out.push(part);
