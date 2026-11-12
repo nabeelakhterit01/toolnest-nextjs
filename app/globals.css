@@ -20,3 +20,15 @@
 .searchbar:focus-within{border-color:#8a84f3;box-shadow:0 0 0 4px #6665e712}
 @media(max-width:650px){.hero{padding:70px 0 74px}.hero h1{font-size:clamp(38px,9vw,55px)}.hero-actions{flex-direction:column}.hero-primary,.hero-secondary{width:100%;max-width:320px}.header{position:relative}.nav nav{gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Accessible responsive navigation */
+.nav{gap:24px}.nav .nav-links{display:flex;align-items:center;gap:29px;margin-left:auto;font-size:14px;font-weight:650;color:#526078}
+.nav-dropdown{position:relative}.nav-dropdown-trigger{background:none;border:0;color:inherit;padding:12px 0;font-weight:650;font-size:14px}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:-18px;min-width:195px;background:white;border:1px solid #e7e9f5;box-shadow:0 20px 45px #17243d17;border-radius:13px;padding:9px;z-index:80}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block}
+.nav-dropdown-menu a{display:block;padding:9px 12px;border-radius:8px;white-space:nowrap}
+.nav-dropdown-menu a:hover{background:#f3f2ff;color:var(--blue)}
+.nav-search{display:inline-flex;align-items:center;gap:8px;color:#5356e8;background:#f0efff;border-radius:10px;padding:10px 14px;font-weight:750;font-size:13px}
+.nav-search:hover{background:#e6e4ff}.nav-toggle,.nav-mobile-contact{display:none}
+#tool-search{scroll-margin-top:110px}
+@media(max-width:760px){.nav{justify-content:space-between}.nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;margin:0;background:white;box-shadow:0 18px 30px #17243d17;padding:18px 24px;flex-direction:column;align-items:stretch;gap:8px}.nav .nav-links.nav-open{display:flex}.nav .nav-links>a{padding:8px 0}.nav-dropdown-trigger{width:100%;text-align:left}.nav-dropdown-menu{display:block;position:static;box-shadow:none;border:0;padding:0 0 0 12px}.nav-mobile-contact{display:block}.nav-search{margin-left:auto}.nav-search span{display:none}.nav-toggle{display:inline-flex;align-items:center;justify-content:center;background:#f5f5ff;border:1px solid #e4e3ff;border-radius:9px;width:40px;height:40px;color:#5555e7;font-size:20px}.header{position:sticky}}
