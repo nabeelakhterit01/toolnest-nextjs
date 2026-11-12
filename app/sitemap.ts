@@ -1,1 +1,11 @@
-import type {MetadataRoute} from 'next';import {tools} from '@/lib/tools';import {publishedPosts} from '@/lib/posts';export const dynamic='force-dynamic';export default async function sitemap():Promise<MetadataRoute.Sitemap>{const base=process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000';const paths=['','/tools','/blog','/about','/contact','/privacy','/terms',...tools.map(t=>'/tools/'+t.slug),...(await publishedPosts()).map(p=>'/blog/'+p.slug)];return paths.map(url=>({url:base+url,changeFrequency:'weekly',priority:url===''?1:0.7}))}
+import type {MetadataRoute} from 'next';
+import {tools} from '@/lib/tools';
+import {publishedPosts} from '@/lib/posts';
+export const dynamic='force-dynamic';
+export default async function sitemap():Promise<MetadataRoute.Sitemap>{
+ const base=(process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000').replace(/\/$/,'');
+ let articles:string[]=[];
+ try{articles=(await publishedPosts()).map(p=>'/blog/'+p.slug)}catch(e){console.error('Sitemap blog lookup failed',e)}
+ const paths=['','/tools','/blog','/about','/contact','/privacy','/terms',...tools.map(t=>'/tools/'+t.slug),...articles];
+ return paths.map(path=>({url:base+path,changeFrequency:path.startsWith('/blog/')?'monthly':'weekly',priority:path===''?1:path.startsWith('/tools/')?0.8:0.6}));
+}
