@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {passwordMatches,token} from '@/lib/auth';
+export async function POST(req:Request){const {password}=await req.json();if(typeof password!=='string'||!passwordMatches(password))return NextResponse.json({error:'Invalid credentials'},{status:401});const r=NextResponse.json({ok:true});r.cookies.set('toolnest_admin',token(),{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'strict',path:'/',maxAge:604800});return r}

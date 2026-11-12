@@ -1,0 +1,26 @@
+export type Tool={slug:string;name:string;category:string;description:string;icon:string};
+export const tools:Tool[]=[
+{slug:'jpg-to-png',name:'JPG to PNG',category:'Image',description:'Convert JPG images to PNG directly in your browser.',icon:'image'},
+{slug:'png-to-jpg',name:'PNG to JPG',category:'Image',description:'Convert PNG images into compact JPEG files.',icon:'image'},
+{slug:'webp-to-jpg',name:'WebP to JPG',category:'Image',description:'Make WebP images compatible with JPEG workflows.',icon:'image'},
+{slug:'jpg-to-webp',name:'JPG to WebP',category:'Image',description:'Export JPG images to modern WebP format.',icon:'image'},
+{slug:'png-to-webp',name:'PNG to WebP',category:'Image',description:'Convert PNG graphics into WebP images.',icon:'image'},
+{slug:'image-compressor',name:'Image Compressor',category:'Image',description:'Reduce image file size with adjustable quality.',icon:'image'},
+{slug:'image-resizer',name:'Image Resizer',category:'Image',description:'Resize images to exact pixel dimensions.',icon:'image'},
+{slug:'image-rotator',name:'Image Rotator',category:'Image',description:'Rotate photos by 90, 180 or 270 degrees.',icon:'image'},
+{slug:'word-counter',name:'Word Counter',category:'Text',description:'Count words, characters, sentences and paragraphs.',icon:'type'},
+{slug:'case-converter',name:'Case Converter',category:'Text',description:'Switch between uppercase, lowercase and title case.',icon:'type'},
+{slug:'remove-duplicate-lines',name:'Remove Duplicate Lines',category:'Text',description:'Clean repeated lines from lists and documents.',icon:'type'},
+{slug:'text-to-slug',name:'Text to Slug',category:'Text',description:'Create clean, readable URL slugs.',icon:'type'},
+{slug:'reverse-text',name:'Reverse Text',category:'Text',description:'Reverse text instantly in your browser.',icon:'type'},
+{slug:'json-formatter',name:'JSON Formatter',category:'Developer',description:'Validate and format JSON with helpful errors.',icon:'code'},
+{slug:'base64-encoder',name:'Base64 Encoder',category:'Developer',description:'Encode Unicode text safely to Base64.',icon:'code'},
+{slug:'base64-decoder',name:'Base64 Decoder',category:'Developer',description:'Decode Base64 text back to readable Unicode.',icon:'code'},
+{slug:'url-encoder',name:'URL Encoder',category:'Developer',description:'Encode special characters for URL components.',icon:'code'},
+{slug:'url-decoder',name:'URL Decoder',category:'Developer',description:'Decode URL-encoded strings.',icon:'code'},
+{slug:'password-generator',name:'Password Generator',category:'Security',description:'Generate strong random passwords using secure browser randomness.',icon:'shield'},
+{slug:'uuid-generator',name:'UUID Generator',category:'Developer',description:'Generate random version 4 UUID identifiers.',icon:'code'},
+{slug:'percentage-calculator',name:'Percentage Calculator',category:'Calculator',description:'Find what percentage one number is of another.',icon:'calculator'},
+{slug:'age-calculator',name:'Age Calculator',category:'Calculator',description:'Calculate age in years, months and days.',icon:'calculator'},
+];
+export const categories=['All','Image','Text','Developer','Security','Calculator'];

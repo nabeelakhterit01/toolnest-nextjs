@@ -1,0 +1,5 @@
+import 'server-only';import crypto from 'node:crypto';import {cookies} from 'next/headers';
+const secret=()=>process.env.SESSION_SECRET||'';
+export function token(){if(!secret()||secret().length<24)throw Error('Configure SESSION_SECRET');const expiry=Date.now()+7*24*3600*1000;const payload=String(expiry);const sig=crypto.createHmac('sha256',secret()).update(payload).digest('hex');return payload+'.'+sig}
+export async function isAdmin(){const value=(await cookies()).get('toolnest_admin')?.value;if(!value||!secret())return false;const [expiry,sig]=value.split('.');if(!expiry||!sig||Number(expiry)<Date.now()||!/^[a-f0-9]{64}$/.test(sig))return false;const expected=crypto.createHmac('sha256',secret()).update(expiry).digest('hex');return crypto.timingSafeEqual(Buffer.from(sig),Buffer.from(expected))}
+export function passwordMatches(input:string){const p=process.env.ADMIN_PASSWORD||'';if(p.length<12)return false;const a=crypto.createHash('sha256').update(input).digest();const b=crypto.createHash('sha256').update(p).digest();return crypto.timingSafeEqual(a,b)}
