@@ -32,5 +32,13 @@ export const tools:Tool[]=[
 {slug:'uuid-generator',name:'UUID Generator',category:'Developer',description:'Generate random version 4 UUID identifiers.',icon:'code'},
 {slug:'percentage-calculator',name:'Percentage Calculator',category:'Calculator',description:'Find what percentage one number is of another.',icon:'calculator'},
 {slug:'age-calculator',name:'Age Calculator',category:'Calculator',description:'Calculate age in years, months and days.',icon:'calculator'},
+{slug:'qr-code-generator',name:'QR Code Generator',category:'Developer',description:'Generate a downloadable QR code from a website URL or text.',icon:'code'},
+{slug:'sha256-hash-generator',name:'SHA-256 Hash Generator',category:'Security',description:'Generate a SHA-256 checksum from text in your browser.',icon:'shield'},
+{slug:'random-number-generator',name:'Random Number Generator',category:'Calculator',description:'Generate a cryptographically secure random integer within your chosen range.',icon:'calculator'},
+{slug:'tip-calculator',name:'Tip Calculator',category:'Calculator',description:'Calculate a restaurant tip and split the bill between people.',icon:'calculator'},
+{slug:'discount-calculator',name:'Discount Calculator',category:'Calculator',description:'Calculate the final price and savings after a percentage discount.',icon:'calculator'},
+{slug:'average-calculator',name:'Average Calculator',category:'Calculator',description:'Find the average, sum and count of a list of numbers.',icon:'calculator'},
+{slug:'hex-to-rgb',name:'HEX to RGB Converter',category:'Developer',description:'Convert six-digit hexadecimal color codes into RGB values.',icon:'code'},
+{slug:'rgb-to-hex',name:'RGB to HEX Converter',category:'Developer',description:'Convert RGB color channels into a hexadecimal color code.',icon:'code'},
 ];
 export const categories=['All','Image','Text','Developer','Security','Calculator'];
