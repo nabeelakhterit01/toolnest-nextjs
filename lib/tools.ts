@@ -40,5 +40,11 @@ export const tools:Tool[]=[
 {slug:'average-calculator',name:'Average Calculator',category:'Calculator',description:'Find the average, sum and count of a list of numbers.',icon:'calculator'},
 {slug:'hex-to-rgb',name:'HEX to RGB Converter',category:'Developer',description:'Convert six-digit hexadecimal color codes into RGB values.',icon:'code'},
 {slug:'rgb-to-hex',name:'RGB to HEX Converter',category:'Developer',description:'Convert RGB color channels into a hexadecimal color code.',icon:'code'},
+{slug:'pdf-merge',name:'Merge PDF',category:'PDF',description:'Combine multiple PDF documents into one file.',icon:'file'},
+{slug:'pdf-split',name:'Split PDF',category:'PDF',description:'Extract a page range from a PDF into a new document.',icon:'file'},
+{slug:'pdf-rotate',name:'Rotate PDF Pages',category:'PDF',description:'Rotate all pages in a PDF by 90, 180 or 270 degrees.',icon:'file'},
+{slug:'pdf-delete-pages',name:'Delete PDF Pages',category:'PDF',description:'Remove selected page numbers from a PDF.',icon:'file'},
+{slug:'pdf-extract-pages',name:'Extract PDF Pages',category:'PDF',description:'Extract specific PDF pages into a separate file.',icon:'file'},
+{slug:'pdf-page-counter',name:'PDF Page Counter',category:'PDF',description:'Check how many pages a PDF document contains.',icon:'file'},
 ];
-export const categories=['All','Image','Text','Developer','Security','Calculator'];
+export const categories=['All','Image','Text','Developer','Security','Calculator','PDF'];
