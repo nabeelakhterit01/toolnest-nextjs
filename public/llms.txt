@@ -1,0 +1,35 @@
+# ToolNest
+
+> ToolNest is a free online collection of browser-based utilities for images, PDFs, text, developer workflows, security and calculations. No public account is required.
+
+Website: https://toolnestweb.com/
+Contact: info@toolnestweb.com
+
+## Main pages
+- [All tools](https://toolnestweb.com/tools)
+- [Guides and tutorials](https://toolnestweb.com/blog)
+- [About ToolNest](https://toolnestweb.com/about)
+- [Contact and issue reports](https://toolnestweb.com/contact)
+
+## Tool categories
+- [Image tools](https://toolnestweb.com/category/image)
+- [PDF tools](https://toolnestweb.com/category/pdf)
+- [Text tools](https://toolnestweb.com/category/text)
+- [Developer tools](https://toolnestweb.com/category/developer)
+- [Security tools](https://toolnestweb.com/category/security)
+- [Calculators](https://toolnestweb.com/category/calculator)
+
+## Selected tools
+- [Image compressor](https://toolnestweb.com/tools/image-compressor)
+- [PDF merge](https://toolnestweb.com/tools/pdf-merge)
+- [Word counter](https://toolnestweb.com/tools/word-counter)
+- [JSON formatter](https://toolnestweb.com/tools/json-formatter)
+- [Password generator](https://toolnestweb.com/tools/password-generator)
+
+## Policies
+- [Privacy Policy](https://toolnestweb.com/privacy)
+- [Terms and Conditions](https://toolnestweb.com/terms-and-conditions)
+- [Cookie Policy](https://toolnestweb.com/cookies-policy)
+- [GDPR and Data Protection](https://toolnestweb.com/gdpr)
+
+Tool availability and output behavior can vary by browser. Check important results before use. This file is an informational index, not an MCP endpoint.
