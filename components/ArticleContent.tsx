@@ -1,11 +1,12 @@
 import type {ReactNode} from 'react';
+import Link from 'next/link';
 function inline(text:string):ReactNode[]{
- const tokens=text.split(/(\[[^\]]+\]\(https?:\/\/[^\s)]+\)|\*\*[^*]+\*\*|\*[^*\n]+\*)/g);
+ const tokens=text.split(/(\[[^\]]+\]\((?:https?:\/\/|\/)[^\s)]+\)|\*\*[^*]+\*\*|\*[^*\n]+\*)/g);
  const out:ReactNode[]=[];
  for(let i=0;i<tokens.length;i++){
   const part=tokens[i];if(!part)continue;
-  const match=part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/);
-  if(match){out.push(<a key={i} href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>);continue}
+  const match=part.match(/^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^\s)]+)\)$/);
+  if(match){const href=match[2];out.push(href.startsWith('/')?<Link key={i} href={href}>{match[1]}</Link>:<a key={i} href={href} target="_blank" rel="noopener noreferrer">{match[1]}</a>);continue}
   if(part.startsWith('**')&&part.endsWith('**'))out.push(<strong key={i}>{part.slice(2,-2)}</strong>);
   else if(part.startsWith('*')&&part.endsWith('*'))out.push(<em key={i}>{part.slice(1,-1)}</em>);
   else out.push(part);
