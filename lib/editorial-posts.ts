@@ -1,5 +1,6 @@
+import {editorialPostsNov22} from './editorial-posts-2026-11-22';
 import type {Post} from './posts';
-export const editorialPosts:Post[]=[
+export const editorialPosts:Post[]=[...editorialPostsNov22,
 {
   "id": "editorial-delete-vs-extract-pdf-pages-guide",
   "slug": "delete-vs-extract-pdf-pages-guide",
